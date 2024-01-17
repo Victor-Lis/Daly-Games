@@ -84,7 +84,7 @@ export default async function Home() {
 
 ```
 
-### Screenshots
+# Screenshots
 
 ![Home](./project-images/Home.png)
 
