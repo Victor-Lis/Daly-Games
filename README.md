@@ -85,13 +85,14 @@ export default async function Home() {
 ```
 ## Screenshots
 
-[Home](./project-images/Home.png)
+![Home](./project-images/Home.png)
 
-[Search](./project-images/Search.png)
+![Search](./project-images/Search.png)
 
-[Game Page](./project-images/Game%20Page.png)
+![Game Page](./project-images/Game%20Page.png)
 
-[Profile](./project-images/Profile.png)
+![Profile](./project-images/Profile.png)
+
 ## Autores
 
 - [@Victor-Lis](https://github.com/Victor-Lis)
