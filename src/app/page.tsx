@@ -2,7 +2,7 @@ import { GameProps } from "@/utils/types/game";
 
 import { Container } from "@/components/container";
 import { GameCard } from "@/components/GameCard";
-import Input from "@/components/input";
+import { Input } from "@/components/input";
 
 import { BsArrowRightSquare } from "react-icons/bs";
 

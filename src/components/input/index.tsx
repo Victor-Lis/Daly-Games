@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi'
 
 import { FormEvent, useState } from 'react'
 
-export default function Input() {
+export function Input() {
 
     const [input, setInput] = useState("")
     const router = useRouter()
