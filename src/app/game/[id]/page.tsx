@@ -1,10 +1,10 @@
-import { GameProps } from "@/utils/types/game";
+import type { GameProps } from "@/utils/types/game";
 import { redirect } from "next/navigation";
 import Image from 'next/image'
 import { Container } from '@/components/container'
 import { Label } from '@/components/label'
 import { GameCard } from "@/components/GameCard";
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 interface PropsParams {
   params: {
@@ -53,19 +53,21 @@ export async function generateMetadata({ params }: PropsParams): Promise<Metadat
 
 async function getData(id: string) {
   try {
-    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
-    return res.json();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_API_URL}/next-api/?api=game&id=${id}`, { next: { revalidate: 60 } })
+    return await res.json();
   } catch (err) {
-    throw new Error("Failed to fetch data")
+    console.error(err)
+    // throw new Error("Failed to fetch data")
   }
 }
 
 async function getGameSorted() {
   try {
-    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game_day`, { cache: "no-store" })
-    return res.json();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_API_URL}/next-api/?api=game_day`, { cache: "no-store" })
+    return await res.json();
   } catch (err) {
-    throw new Error("Failed to fetch data")
+    console.error(err)
+    // throw new Error("Failed to fetch data")
   }
 }
 
