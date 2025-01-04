@@ -1,4 +1,4 @@
-import { GameProps } from "@/utils/types/game";
+import type { GameProps } from "@/utils/types/game";
 
 import { Container } from "@/components/container";
 import { GameCard } from "@/components/GameCard";
@@ -12,7 +12,7 @@ import Link from "next/link";
 async function getDalyGame() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_API_URL}/next-api/?api=game_day`,
+      `${process.env.NEXT_PUBLIC_NEXT_API_URL}/next-api/?api=game_day`,
       { next: { revalidate: 320 } }
     );
     return res.json();
@@ -24,7 +24,7 @@ async function getDalyGame() {
 async function getGamesData() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_API_URL}/next-api/?api=games`,
+      `${process.env.NEXT_PUBLIC_NEXT_API_URL}/next-api/?api=games`,
       { next: { revalidate: 320 } }
     );
     return res.json();
