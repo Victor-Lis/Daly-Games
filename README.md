@@ -63,11 +63,17 @@ export interface GameProps {
 ![Home](./project-images/Home.png)
 *Página inicial com jogo do dia e listagem*
 
+<br>
+
 ![Search](./project-images/Search.png)
 *Busca de jogos por título*
 
+<br>
+
 ![Game Page](./project-images/Game%20Page.png)
 *Página detalhada do jogo*
+
+<br>
 
 ![Profile](./project-images/Profile.png)
 *Perfil do usuário com favoritos*
